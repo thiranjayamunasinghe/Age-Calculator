@@ -1,0 +1,95 @@
+﻿<!--154170x-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Qestion-2</title>
+	<style type="text/css">
+
+	h1{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	color:blue;
+	color: green;
+    text-shadow: 1px 2px 5px black ;
+	font-size:25pt;
+	}
+	p{
+	font-size:25pt;
+	
+	}
+	div{
+	margin-left:400px;
+	border:2px solid green;
+	width:500px;
+	height:100px;
+	border-radius:25px;
+	}
+	em{
+	font-size:23pt;
+	
+	}
+}
+</style>
+
+</head>
+
+	
+<body style="background-color:light blue">
+	<h1>Age calculator</h1>
+	<script type="text/javascript">
+		var year,month,day;
+		var ageday, agemonth,ageyear;
+		var myyear=window.prompt("Enter year:","1995");
+		var mymonth=window.prompt("Enter month: 1(January), 2(February) etc..","2");
+		var myday=window.prompt("Enter day:","6");
+		
+		now = new Date();
+		year = now.getFullYear();
+     	month = now.getMonth();
+     	day = now.getDate();
+     	
+     	
+
+		var year1= parseInt(year);
+     	var month1= parseInt(month)+1;
+		var day1= parseInt(day);
+		
+		var myyear1= parseInt(myyear);
+		var mymonth1= parseInt(mymonth);
+		var myday1= parseInt(myday);
+
+    if(year1>myyear&& mymonth1<=12 && myday1<=31) {	
+     	if(day1<myday1){
+     		ageday=day1+30-myday1;
+     		month1=month1-1;
+     	}
+     	else{
+     		ageday=day1-myday1;
+     	}
+     	
+     	
+     	if(month1<mymonth1){
+     		agemonth=month1+12-mymonth;	
+     		year1=year1-1;
+     	}
+     	else{
+     		agemonth=month1-mymonth1;
+     	}
+     	
+
+     	ageyear=year1-myyear1;
+     	
+	}
+	else
+		window.alert("Wrong input. try agin");
+		
+	document.writeln("<p>Your birthday is : "+myyear1+"/"+mymonth1+"/"+myday1+"</p>");
+	document.writeln("<p>Today is : "+year1+"/"+month1+"/"+day1+"</p>");
+	
+	document.writeln("<div><em>Your age is : "+ageyear+" Years "+agemonth+" Months and "+ageday+" Days</em></div>");
+	</script>
+</body>
+
+</html>
